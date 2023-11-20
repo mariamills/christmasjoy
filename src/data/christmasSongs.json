@@ -1,0 +1,240 @@
+[
+  {
+    "name": "All I Want for Christmas Is You",
+    "artist": "Mariah Carey",
+    "url": "https://www.youtube.com/watch?v=yXQViqx6GMY",
+    "year": 1994,
+    "genre": ["Pop", "R&B"]
+  },
+  {
+    "name": "White Christmas",
+    "artist": "Bing Crosby",
+    "url": "https://www.youtube.com/watch?v=v5ryZdpEHqM",
+    "year": 1942,
+    "genre": ["Jazz", "Pop"]
+  },
+  {
+    "name": "Last Christmas",
+    "artist": "Wham!",
+    "url": "https://www.youtube.com/watch?v=E8gmARGvPlI",
+    "year": 1984,
+    "genre": ["Pop", "Post-disco"]
+  },
+  {
+    "name": "Jingle Bell Rock",
+    "artist": "Bobby Helms",
+    "url": "https://www.youtube.com/watch?v=Gqwk7uR1BI8",
+    "year": 1957,
+    "genre": ["Rock", "Pop"]
+  },
+  {
+    "name": "I'll Be Home For Christmas",
+    "artist": "Bing Crosby",
+    "url": "https://www.youtube.com/watch?v=EYOvd2PZoPU",
+    "year": 1943,
+    "genre": ["Jazz", "Pop"]
+  },
+  {
+    "name": "It's the Most Wonderful Time of the year",
+    "artist": "Andy Williams",
+    "url": "https://www.youtube.com/watch?v=gFtb3EtjEic",
+    "year": 1963,
+    "genre": ["R&B", "Pop"]
+  },
+  {
+    "name": "Have Yourself a Merry Little Christmas",
+    "artist": "Judy Garland",
+    "url": "https://www.youtube.com/watch?v=CreWsnhQwzY",
+    "year": 1944,
+    "genre": "Jazz"
+  },
+  {
+    "name": "Rockin' Around the Christmas Tree",
+    "artist": "Brenda Lee",
+    "url": "https://www.youtube.com/watch?v=TFsZy9t-qDc",
+    "year": 1958,
+    "genre": ["Rock", "Pop"]
+  },
+  {
+    "name": "Happy Xmas (War Is Over)",
+    "artist": "John Lennon",
+    "url": "https://www.youtube.com/watch?v=yN4Uu0OlmTg",
+    "year": 1971,
+    "genre": ["Rock"]
+  },
+  {
+    "name": "The Christmas Song",
+    "artist": "Nat King Cole",
+    "url": "https://www.youtube.com/watch?v=c-RXKcc0sZs",
+    "year": 1946,
+    "genre": ["Jazz", "Pop"]
+  },
+  {
+    "name": "It's Beginning To Look A Lot Like Christmas",
+    "artist": "Michael Bublé",
+    "url": "https://www.youtube.com/watch?v=QJ5DOWPGxwg",
+    "year": 2011,
+    "genre": ["Jazz", "Pop"]
+  },
+  {
+    "name": "Peace On Earth / Little Drummer Boy",
+    "artist": "Bing Crosby & David Bowie",
+    "url": "https://www.youtube.com/watch?v=2RJ_IsGruho",
+    "year": 1977,
+    "genre": ["Pop", "Rock"]
+  },
+  {
+    "name": "Believe",
+    "artist": "Josh Groban",
+    "url": "https://www.youtube.com/watch?v=3Avycrez66o",
+    "year": 2004,
+    "genre": ["Pop", "Classical"]
+  },
+  {
+    "name": "Mistletoe",
+    "artist": "Justin Bieber",
+    "url": "https://www.youtube.com/watch?v=LUjn3RpkcKY",
+    "year": 2011,
+    "genre": ["Pop", "R&B"]
+  },
+  {
+    "name": "Chipmunk Song (Christmas Don't Be Late)",
+    "artist": "Alvin & The Chipmunks",
+    "url": "https://www.youtube.com/watch?v=joAXosrtocg",
+    "year": 1958,
+    "genre": ["Pop", "Children's"]
+  },
+  {
+    "name": "Santa Claus Is Coming To Town",
+    "artist": "Bruce Springsteen",
+    "url": "https://www.youtube.com/watch?v=R8CBoVc_OMI",
+    "year": 1985,
+    "genre": ["Rock", "Pop"]
+  },
+  {
+    "name": "Santa Claus Is Comin' To Town",
+    "artist": "Jackson 5",
+    "url": "https://www.youtube.com/watch?v=HhiUOCo8LYQ",
+    "year": 1970,
+    "genre": ["Pop", "R&B"]
+  },
+  {
+    "name": "Holly Jolly Christmas",
+    "artist": "Burl Ives",
+    "url": "https://www.youtube.com/watch?v=P_dI6fVZwd0",
+    "year": 1965,
+    "genre": ["Pop", "Folk", "Country", "Blues"]
+  },
+  {
+    "name": "Feliz Navidad",
+    "artist": "José Feliciano",
+    "url": "https://www.youtube.com/watch?v=0UVUW11FENs",
+    "year": 1970,
+    "genre": ["Pop", "Latin"]
+  },
+  {
+    "name": "Santa Baby",
+    "artist": "Eartha Kitt",
+    "url": "https://www.youtube.com/watch?v=Mk_GmhD053E",
+    "year": 1953,
+    "genre": ["Pop", "Jazz"]
+  },
+  {
+    "name": "Sleigh Ride",
+    "artist": "The Ronettes",
+    "url": "https://www.youtube.com/watch?v=DkXIJe8CaIc",
+    "year": 1963,
+    "genre": ["R&B", "Rock", "Pop"]
+  },
+  {
+    "name": "Blue Christmas",
+    "artist": "Elvis Presley",
+    "url": "https://www.youtube.com/watch?v=3KK6sMo8NBY",
+    "year": 1957,
+    "genre": ["Rock"]
+  },
+  {
+    "name": "Wonderful Christmastime - Edited Version / Remastered 2011",
+    "artist": "Paul McCartney",
+    "url": "https://www.youtube.com/watch?v=2TfWo3GsIII",
+    "year": 2011,
+    "genre": ["Pop", "Rock", "Classical", "Synth-pop"]
+  },
+  {
+    "name": "Do They Know It's Christmas?",
+    "artist": "Band Aid",
+    "url": "https://www.youtube.com/watch?v=-w7jyVHocTk",
+    "year": 1984,
+    "genre": ["Pop", "Rock"]
+  },
+  {
+    "name": "Baby, It's Cold Outside",
+    "artist": "Dean Martin",
+    "url": "https://www.youtube.com/watch?v=lnYSTnTMGQo",
+    "year": 1959,
+    "genre": ["Jazz", "Pop"]
+  },
+  {
+    "name": "Shake Up Christmas",
+    "artist": "Train",
+    "url": "https://www.youtube.com/watch?v=J-8VCL4uSUc",
+    "year": 2010,
+    "genre": ["Pop", "Rock"]
+  },
+  {
+    "name": "Chrisimas Lights",
+    "artist": "Coldplay",
+    "url": "https://www.youtube.com/watch?v=z1rYmzQ8C9Q",
+    "year": 2010,
+    "genre": ["Pop", "Rock"]
+  },
+  {
+    "name": "Christmas (Baby Please Come Home)",
+    "artist": "Darlene Love",
+    "url": "https://www.youtube.com/watch?v=4EvZOXEoJ84",
+    "year": 1963,
+    "genre": ["Pop", "Rock", "R&B", "Soul"]
+  },
+  {
+    "name": "Sleigh Bells (PhatCap! Trap Remix)",
+    "artist": "PhatCap!",
+    "url": "https://www.youtube.com/watch?v=xM4rIMWvSm4",
+    "year": 2013,
+    "genre": ["Trap"]
+  },
+  {
+    "name": "Rudolph The Red-Nosed Reindeer",
+    "artist": "Gene Autry",
+    "url": "https://www.youtube.com/watch?v=nZeyY0NSTW4",
+    "year": 1949,
+    "genre": ["Country"]
+  },
+  {
+    "name": "Up On The House Top",
+    "artist": "Gene Autry",
+    "url": "https://www.youtube.com/watch?v=ISqjyIdmZQs",
+    "year": 1953,
+    "genre": ["Country"]
+  },
+  {
+    "name": "Here Comes Santa Claus (Right Down Santa Claus Lane)",
+    "artist": "Gene Autry",
+    "url": "https://www.youtube.com/watch?v=oNwG28tZDsg",
+    "year": 1947,
+    "genre": ["Country"]
+  },
+  {
+    "name": "Santa Calus is Coming to Town (Trap Remix)",
+    "artist": "Alexander Forbidden",
+    "url": "https://www.youtube.com/watch?v=2QP8JSGmdfs",
+    "year": 2019,
+    "genre": ["Trap"]
+  },
+  {
+    "name": "Here Comes Santa Claus (Trap Remix)",
+    "artist": "Trap Music Now",
+    "url": "https://www.youtube.com/watch?v=MtKkatg87TM",
+    "year": 2016,
+    "genre": ["Trap"]
+  }
+]
