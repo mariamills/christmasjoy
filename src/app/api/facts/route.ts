@@ -5,7 +5,7 @@ export function GET(request: NextRequest) {
   // Get a random fact if query contains random
     if (request.url.includes('random')) {
         const randomFact = christmasFacts[Math.floor(Math.random() * christmasFacts.length)];
-        return NextResponse.json({ fact: randomFact });
+        return NextResponse.json(randomFact);
     }
 
     // Return all facts
