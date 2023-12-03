@@ -8,7 +8,7 @@ function ChristmasImage() {
     const [images, setImages] = useState<Image[]>([]);
 
     useEffect(() => {
-        fetch(`https://christmasjoy.dev/api/images`)
+        fetch(`/api/images`)
             .then(response => response.json())
             .then(data => {
                 setImages(data)

@@ -11,7 +11,7 @@ function Jokes() {
 
 
     useEffect(() => {
-        fetch(`https://christmasjoy.dev/api/jokes`)
+        fetch(`/api/jokes`)
             .then(response => response.json())
             .then(data => {
                 setJokes(data);

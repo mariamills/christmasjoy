@@ -12,7 +12,7 @@ function Examples() {
     const [dayOfTheWeek, setDayOfTheWeek] = useState('Unknown')
 
     useEffect(() => {
-         fetch(`https://christmasjoy.dev/api/countdown`)
+         fetch(`/api/countdown`)
             .then(response => response.json())
             .then(data => {
                 setDays(data.days)
