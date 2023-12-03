@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from 'react'
+import {Fragment, useEffect, useState} from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
     BellIcon,
@@ -52,7 +52,10 @@ export default function DocsSidebar() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
 
     // Update current
-    updateCurrent(window.location.pathname);
+    useEffect(() => {
+        // run only on client
+        updateCurrent(window.location.pathname);
+    }, []);
 
     return (
         <div>
