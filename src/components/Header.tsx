@@ -12,37 +12,32 @@ import {
     InformationCircleIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlayCircleIcon, } from '@heroicons/react/20/solid'
+import Link from "next/link";
 
 const products = [
     {
         name: 'Endpoints',
         description: 'Brief list of available endpoints',
-        href: '/endpoints',
+        href: '/docs/endpoints',
         icon: CursorArrowRaysIcon,
     },
     {
         name: 'API Documentation',
-        description: 'Detailed documentation on how to use the API. Coming soon!',
-        href: '/docs', // Update with the correct endpoint or page link
+        description: 'Detailed documentation on how to use the API. Still in the works.',
+        href: '/docs/getting-started',
         icon: QuestionMarkCircleIcon,
     },
     {
         name: 'Examples',
         description: 'Learn how to use our API with our examples. Coming soon!',
-        href: '#',
+        href: '/docs/examples',
         icon: InformationCircleIcon,
-    },
-    {
-        name: 'Quick Start Guide',
-        description: 'Get started quickly with our easy-to-follow guide. Coming soon!',
-        href: '#', // Update with the correct endpoint or page link
-        icon: PlayCircleIcon,
     },
 ]
 const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
     { name: 'Support', href: '#', icon: UserCircleIcon },
     { name: 'Leave suggestion', href: '#', icon: SquaresPlusIcon },
+    { name: 'Watch demo [Coming Soon]', href: '#', icon: PlayCircleIcon },
 ]
 
 function classNames(...classes: string[]) {
@@ -56,10 +51,10 @@ export default function Header() {
         <header className="relative isolate z-10 bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
+                    <Link href="#" className="-m-1.5 p-1.5">
+                        <span className="sr-only">ChristmasJoy API</span>
                     {/* TODO: Add Logo  */}
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -73,18 +68,18 @@ export default function Header() {
                 </div>
 
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <a href="/" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
                         Home
-                    </a>
-                    <a href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+                    </Link>
+                    <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
                         About
-                    </a>
-                    <a href="/#overview" className="text-sm font-semibold leading-6 text-gray-900">
+                    </Link>
+                    <Link href="/#overview" className="text-sm font-semibold leading-6 text-gray-900">
                         Overview
-                    </a>
-                    <a href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
+                    </Link>
+                    <Link href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
                         Jokes
-                    </a>
+                    </Link>
 
                     <Popover>
                         <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -108,10 +103,10 @@ export default function Header() {
                                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                                 <item.icon className="h-6 w-6 text-gray-600 group-hover:text-red-600" aria-hidden="true" />
                                             </div>
-                                            <a href={item.href} className="mt-6 block font-semibold text-gray-900">
+                                            <Link href={item.href} className="mt-6 block font-semibold text-gray-900">
                                                 {item.name}
                                                 <span className="absolute inset-0" />
-                                            </a>
+                                            </Link>
                                             <p className="mt-1 text-gray-600">{item.description}</p>
                                         </div>
                                     ))}
@@ -120,14 +115,14 @@ export default function Header() {
                                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                                         <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">
                                             {callsToAction.map((item) => (
-                                                <a
+                                                <Link
                                                     key={item.name}
                                                     href={item.href}
                                                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                                                 >
                                                     <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                                                     {item.name}
-                                                </a>
+                                                </Link>
                                             ))}
                                         </div>
                                     </div>
@@ -137,21 +132,21 @@ export default function Header() {
                     </Popover>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a
-                        href="#"
+                    <Link
+                        href="/docs/getting-started"
                         className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
                         Get started
-                    </a>
+                    </Link>
                 </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <Link href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             {/* TODO: Add Logo  */}
-                        </a>
+                        </Link>
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -189,34 +184,34 @@ export default function Header() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <a
+                                <Link
                                     href="/"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Home
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     About
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/#overview"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Overview
-                                </a>
-                                <a href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
+                                </Link>
+                                <Link href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
                                     Jokes
-                                </a>
+                                </Link>
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="/"
+                                <Link
+                                    href="/docs/getting-started"
                                     className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
                                     Get Started
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

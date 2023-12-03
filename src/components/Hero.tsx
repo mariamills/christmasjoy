@@ -1,4 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -9,7 +10,7 @@ export default function Hero() {
                         <div className="mx-auto max-w-2xl">
                             <div className="max-w-lg">
                                 <div className="mt-24 sm:mt-32 lg:mt-16">
-                                    <a href="/" className="inline-flex space-x-6">
+                                    <Link href="/" className="inline-flex space-x-6">
                     <span className="rounded-full bg-red-600/10 px-3 py-1 text-sm font-semibold leading-6 text-red-600 ring-1 ring-inset ring-red-600/10">
                       What&apos;s new
                     </span>
@@ -17,7 +18,7 @@ export default function Hero() {
                       <span>Just released v0.1.0</span>
                       <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
                     </span>
-                                    </a>
+                                    </Link>
                                 </div>
                                 <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                                     It&apos;s the most <span className="text-red-500">wonderful</span> time of the year.
@@ -26,15 +27,15 @@ export default function Hero() {
                                     Dive into the festive spirit with the <span className="text-green-600">ChristmasJoy API</span>, your go-to source for all things Christmas. This free API brings the magic of the holiday season right to your fingertips, offering a delightful array of Christmas-related information.
                                 </p>
                                 <div className="mt-10 flex items-center gap-x-6">
-                                    <a
-                                        href="/docs"
+                                    <Link
+                                        href="/docs/getting-started"
                                         className="rounded-md bg-red-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
                                     >
                                         Documentation
-                                    </a>
-                                    <a href="https://github.com/mariamills/christmas-joy" target="_blank" rel="noreferrer" className="text-sm font-semibold leading-6 text-gray-900 hover:ml-2 transition-all">
+                                    </Link>
+                                    <Link href="https://github.com/mariamills/christmas-joy" target="_blank" rel="noreferrer" className="text-sm font-semibold leading-6 text-gray-900 hover:ml-2 transition-all">
                                         View on GitHub <span aria-hidden="true">→</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

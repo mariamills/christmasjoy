@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import Link from "next/link";
 
 interface Image {
     url: string;
@@ -29,11 +30,12 @@ function ChristmasImage() {
                         <p className="mt-6 text-base leading-7 text-gray-600">
                             The default amount of images returned is <span className="text-red-500">5</span>, but you can specify the amount of images you want returned by adding a <span className="text-red-500">amount</span> query parameter to the URL. For example, if you want 10 images returned, you would make a request to <span className="text-red-500 italic">https://christmasjoy.dev/api/images?amount=10</span>.
                         </p>
-                        <button
+                        <Link
+                            href="/docs/endpoints"
                             type="button"
                             className="rounded-md bg-green-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600 mt-4"
                         >Learn More
-                        </button>
+                        </Link>
                     </div>
                     {images.length > 1 && (
                         <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
