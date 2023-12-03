@@ -133,7 +133,7 @@ export default function DocsSidebar() {
                                             </li>
                                             <li className="mt-auto">
                                                 <Link
-                                                    href="#"
+                                                    href="https://github.com/mariamills/christmasjoy"
                                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                                 >
                                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -198,7 +198,7 @@ export default function DocsSidebar() {
                             </li>
                             <li className="mt-auto">
                                 <Link
-                                    href="#"
+                                    href="https://github.com/mariamills/christmasjoy"
                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                 >
                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />

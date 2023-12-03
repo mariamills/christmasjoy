@@ -35,7 +35,7 @@ const products = [
     },
 ]
 const callsToAction = [
-    { name: 'Support', href: '#', icon: UserCircleIcon },
+    { name: 'Support', href: 'https://github.com/mariamills/christmasjoy', icon: UserCircleIcon },
     { name: 'Leave suggestion', href: '#', icon: SquaresPlusIcon },
     { name: 'Watch demo [Coming Soon]', href: '#', icon: PlayCircleIcon },
 ]

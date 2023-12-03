@@ -33,7 +33,7 @@ export default function Hero() {
                                     >
                                         Documentation
                                     </Link>
-                                    <Link href="https://github.com/mariamills/christmas-joy" target="_blank" rel="noreferrer" className="text-sm font-semibold leading-6 text-gray-900 hover:ml-2 transition-all">
+                                    <Link href="https://github.com/mariamills/christmasjoy" target="_blank" rel="noreferrer" className="text-sm font-semibold leading-6 text-gray-900 hover:ml-2 transition-all">
                                         View on GitHub <span aria-hidden="true">→</span>
                                     </Link>
                                 </div>
