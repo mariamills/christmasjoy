@@ -12,6 +12,7 @@ import {
     CalendarIcon,
 } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import Link from "next/link";
 
 // Define the type for classes in classNames function
 type ClassValue = string | undefined | null | false;
@@ -111,7 +112,7 @@ export default function DocsSidebar() {
                                                 <ul role="list" className="-mx-2 space-y-1">
                                                     {navigation.map((item) => (
                                                         <li key={item.name}>
-                                                            <a
+                                                            <Link
                                                                 href={item.href}
                                                                 className={classNames(
                                                                     item.current
@@ -122,19 +123,19 @@ export default function DocsSidebar() {
                                                             >
                                                                 <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                                 {item.name}
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     ))}
                                                 </ul>
                                             </li>
                                             <li className="mt-auto">
-                                                <a
+                                                <Link
                                                     href="#"
                                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                                 >
                                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                     Support
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </nav>
@@ -162,7 +163,7 @@ export default function DocsSidebar() {
                                 <ul role="list" className="-mx-2 space-y-1">
                                     {navigation.map((item) => (
                                         <li key={item.name}>
-                                            <a
+                                            <Link
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
@@ -173,17 +174,17 @@ export default function DocsSidebar() {
                                             >
                                                 <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                             {item.subNavigation && (
                                                 <ul className="mt-1 pl-4">
                                                     {item.subNavigation.map(subItem => (
                                                         <li key={subItem.name}>
-                                                            <a
+                                                            <Link
                                                                 href={subItem.href}
                                                                 className="text-gray-600 hover:text-white hover:bg-red-600 group flex gap-x-3 rounded-md p-1 mt-0.5 text-sm"
                                                             >
                                                                 {subItem.name}
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -193,13 +194,13 @@ export default function DocsSidebar() {
                                 </ul>
                             </li>
                             <li className="mt-auto">
-                                <a
+                                <Link
                                     href="#"
                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                 >
                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
                                     Support
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </nav>
