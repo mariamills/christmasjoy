@@ -1,0 +1,91 @@
+[
+  {
+    "question": "/api/jokes",
+    "answer": "Returns a list of Christmas-themed jokes",
+    "title": "Optional Parameters",
+    "parameters": [
+      {
+        "name": "random",
+        "required": false,
+        "default": "false",
+        "description": "Returns a random joke from the list of jokes",
+        "example": "https://christmasjoy.dev/api/jokes?random"
+      }
+    ]
+  },
+  {
+    "question": "/api/facts",
+    "answer": "Returns a list of Christmas-themed facts",
+    "title": "Optional Parameters",
+    "parameters": [
+      {
+        "name": "random",
+        "required": false,
+        "default": "false",
+        "description": "Returns a random fact from the list of facts",
+        "example": "https://christmasjoy.dev/api/facts?random"
+      }
+    ]
+  },
+  {
+    "question": "/api/images",
+    "answer": "Returns a list of Christmas-themed images. Default is five 900x700 images.",
+    "title": "Optional Parameters",
+    "parameters": [
+      {
+        "name": "amount",
+        "required": false,
+        "default": "false",
+        "description": "Returns the specified amount of images. Max is 10.",
+        "example": "https://christmasjoy.dev/api/images?amount=10"
+      },
+      {
+        "name": "category",
+        "required": false,
+        "default": "false",
+        "description": "Returns images from the specified category.",
+        "example": "https://christmasjoy.dev/api/images?amount=7&category=santa"
+      }
+    ]
+  },
+  {
+    "question": "/api/songs",
+    "answer": "Returns a list of Christmas-themed songs",
+    "title": "Optional Parameters",
+    "parameters": [
+      {
+        "name": "random",
+        "required": false,
+        "default": "false",
+        "description": "Returns a random song from the list of songs",
+        "example": "https://christmasjoy.dev/api/songs?random"
+      }
+    ]
+  },
+  {
+    "question": "/api/greetings",
+    "answer": "Returns a list of Christmas-themed greetings",
+    "title": "Optional Parameters",
+    "parameters": [
+      {
+        "name": "random",
+        "required": false,
+        "default": "false",
+        "description": "Returns a random greeting from the list of greetings",
+        "example": "https://christmasjoy.dev/api/greetings?random"
+      }
+    ]
+  },
+  {
+    "question": "/api/cookie",
+    "answer": "Returns the type of cookie Santa would like for you to leave him this year"
+  },
+  {
+    "question": "/api/countdown",
+    "answer": "Returns the number of months, weeks, sleeps, days, hours, minutes, and seconds until Christmas. Also, what day of the week Christmas falls on this year."
+  },
+  {
+    "question": "More endpoints coming soon!",
+    "answer": "If you have any suggestions for endpoints, please either open an issue on GitHub or add it yourself and submit a pull request. Thanks!"
+  }
+]
