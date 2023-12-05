@@ -27,9 +27,11 @@ interface TimeUntilChristmas {
 
 function getTimeUntilChristmas(): TimeUntilChristmas {
     const now = new Date();
+    now.setHours(0, 0, 0, 0); // set time to start of day
+
     const year = now.getMonth() === 11 && now.getDate() >= 25 ? now.getFullYear() + 1 : now.getFullYear();
 
-    const christmas = new Date(year, 11, 25); // Month is 0-indexed, 11 = December
+    const christmas = new Date(year, 11, 25, 0, 0, 0, 0); // Month is 0-indexed, 11 = December
     const diff = christmas.getTime() - now.getTime(); // Difference in milliseconds
 
     const days = diff / (1000 * 60 * 60 * 24);
@@ -49,5 +51,7 @@ function getTimeUntilChristmas(): TimeUntilChristmas {
 }
 
 export function GET(request: NextRequest) {
-    return NextResponse.json(getTimeUntilChristmas());
+    const response = NextResponse.json(getTimeUntilChristmas());
+    response.headers.set('Cache-Control', 'no-store');
+    return response;
 }

@@ -6,8 +6,8 @@ import Header from "../components/Header";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Christmas Joy API',
-  description: 'Christmas Joy API is a REST API for all things Christmas',
+  title: 'ChristmasJoy API',
+  description: 'ChristmasJoy API is a REST API for all things Christmas',
 }
 
 export default function RootLayout({
