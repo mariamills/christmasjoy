@@ -54,7 +54,6 @@ function getTimeUntilChristmas(): TimeUntilChristmas {
 
 export function GET(request: NextRequest) {
     const response = NextResponse.json(getTimeUntilChristmas());
-    console.log(getTimeUntilChristmas());
     response.headers.set('Cache-Control', 'no-store');
     return response;
 }
