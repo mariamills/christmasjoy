@@ -13,6 +13,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Link from "next/link";
+import Image from "next/image";
 
 // Define the type for classes in classNames function
 type ClassValue = string | undefined | null | false;
@@ -103,10 +104,11 @@ export default function DocsSidebar() {
                                 {/* Sidebar component, swap this element with another sidebar if you like */}
                                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-100 px-6 pb-4 ring-1 ring-white/10">
                                     <div className="flex h-16 shrink-0 items-center">
-                                        <img
-                                            className="h-8 w-auto"
-                                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                        <Image
+                                            src="/santa-claus.svg"
                                             alt="ChristmasJoy API"
+                                            width={32}
+                                            height={32}
                                         />
                                     </div>
                                     <nav className="flex flex-1 flex-col">
@@ -154,10 +156,11 @@ export default function DocsSidebar() {
                 {/* Sidebar component */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-50 px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
-                        <img
-                            className="h-8 w-auto"
-                            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                        <Image
+                            src="/santa-claus.svg"
                             alt="ChristmasJoy API"
+                            width={32}
+                            height={32}
                         />
                     </div>
                     <nav className="flex flex-1 flex-col">

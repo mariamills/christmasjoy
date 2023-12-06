@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useState } from 'react'
+import {Fragment, useState} from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
     Bars3Icon,
@@ -13,6 +13,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PlayCircleIcon, } from '@heroicons/react/20/solid'
 import Link from "next/link";
+import Image from "next/image";
 
 const products = [
     {
@@ -45,15 +46,20 @@ function classNames(...classes: string[]) {
 }
 
 export default function Header() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
         <header className="relative isolate z-10 bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
+                <div className="flex lg:flex-1 lg:invisible">
                     <Link href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">ChristmasJoy API</span>
-                    {/* TODO: Add Logo  */}
+                        <Image
+                            src="/santa-claus.svg"
+                            alt="ChristmasJoy API"
+                            width={40}
+                            height={40}
+                        />
                     </Link>
                 </div>
                 <div className="flex lg:hidden">
@@ -82,7 +88,7 @@ export default function Header() {
                     </Link>
 
                     <Popover>
-                        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" >
                             API
                             <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                         </Popover.Button>
@@ -96,8 +102,8 @@ export default function Header() {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 -translate-y-1"
                         >
-                            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white pt-14 shadow-lg ring-1 ring-gray-900/5">
-                                <div className="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
+                            <Popover.Panel className="absolute inset-x-0 top-0 -z-10 bg-white pt-14 shadow-lg ring-1 ring-gray-900/5" >
+                                <div className="lg:ml-80 grid max-w-7xl grid-cols-3 gap-x-4 px-6 py-10 lg:px-8 xl:gap-x-8">
                                     {products.map((item) => (
                                         <div key={item.name} className="group relative rounded-lg p-6 text-sm leading-6 hover:bg-gray-50">
                                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
@@ -112,7 +118,7 @@ export default function Header() {
                                     ))}
                                 </div>
                                 <div className="bg-gray-50">
-                                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                    <div className="lg:ml-80 max-w-7xl px-6 lg:px-8">
                                         <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">
                                             {callsToAction.map((item) => (
                                                 <Link
@@ -144,8 +150,13 @@ export default function Header() {
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            {/* TODO: Add Logo  */}
+                            <span className="sr-only">ChristmasJoy API</span>
+                            <Image
+                                src="/santa-claus.svg"
+                                alt="ChristmasJoy API"
+                                width={40}
+                                height={40}
+                            />
                         </Link>
                         <button
                             type="button"
@@ -202,7 +213,7 @@ export default function Header() {
                                 >
                                     Overview
                                 </Link>
-                                <Link href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
+                                <Link href="/#jokes" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Jokes
                                 </Link>
                             </div>
