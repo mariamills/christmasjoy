@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# ChristmasJoy API 🎄
 
-First, run the development server:
+Welcome to the __ChristmasJoy API__, a festive and open-source __REST API__ designed to bring the joy of Christmas to your applications. This API, crafted with NextJS 14 and TailwindCSS, offers a variety of Christmas-themed data, perfect for creating holiday websites, apps, and more.
 
+
+## 🎯Features
+
+- __Endpoints__: Access jokes, images, facts, songs, greetings, and more through easy-to-use API endpoints.
+- __Frontend Website__: A user-friendly website showcasing the capabilities of the API.
+- __Documentation__: Detailed documentation to get you started quickly.
+- __Open Source__: Free to use and contribute to, licensed under AGPL-3.0.
+
+## 🖥️Tech Stack
+
+- __NextJS 14__: For a robust and scalable backend.
+- __TailwindCSS & TailwindCSS Components__: For a sleek and responsive frontend design.
+- __TypeScript__: Ensuring type safety and improving developer experience.
+
+## 📚API Endpoints
+- __/api/jokes__: Returns a list of Christmas-themed jokes.
+- __/api/images__: Returns a list of Christmas-themed images.
+- __/api/facts__: Returns a list of Christmas-themed facts.
+- __/api/songs__: Returns a list of Christmas-themed songs.
+- __/api/greetings__: Returns a list of Christmas-themed greetings.
+- __/api/recipes__: Returns a list of Christmas-themed recipes. (Currently only one recipe is available)
+- __/api/cookies__: Returns what type of cookies Santa wants this year.
+- __/api/countdown__: Returns the number of months, days, hours, minutes, and seconds until Christmas. And the day of the week that Christmas falls on.
+
+Some endpoints have optional query parameters that can be used to filter the results, such as getting a random joke or image.
+
+For more information, visit our website and check out the [API documentation](https://christmasjoy.dev/docs/endpoints).
+
+## Make a Request: Quick Start
+
+Getting started with the ChristmasJoy API is easy. Here's a quick guide to making your first request:
+
+### Step 1: Base URL
+Start with the base URL of the API:
+`https://christmasjoy.dev/api/`
+
+### Step 2: Choose an Endpoint
+Select the endpoint you want to access. Here are a few examples:
+
+- `/api/jokes` for Christmas jokes.
+- `/api/images` for festive images.
+- `/api/songs` for Christmas songs.
+- Visit the [API documentation](https://christmasjoy.dev/docs/endpoints) for a full list of endpoints.
+
+### Step 3: Make the Request
+Use a tool like `curl` or any HTTP client in your preferred programming language. 
+Here's an example using curl:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+curl https://christmasjoy.dev/api/jokes
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Step 4: Handle the Response
+The API will return a JSON response. Here’s a simple example in JavaScript using `fetch`:
+```javascript
+fetch('https://christmasjoy.dev/api/jokes')
+    .then(response => response.json())
+    .then(data => console.log(data));
+```
+Next Steps
+This is just the beginning! To explore more endpoints and learn about additional parameters and response formats, please visit the [website](https://christmasjoy.dev).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To use the ChristmasJoy API, visit our website and check out the API documentation.
 
-## Learn More
+### Prerequisites
+- Basic knowledge of REST APIs
+- Familiarity with JavaScript/TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+### Installing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the repository
+```bash
+git clone https://github.com/mariamills/christmasjoy.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Navigate to the project directory
+```bash
+cd christmasjoy-api
+```
 
-## Deploy on Vercel
+3. Install dependencies
+### `npm install`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Start the development server
+### `npm run dev`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`REACT_APP_API_URL=https://christmasjoy.dev/api`
+
+
+## 👥Contributing
+
+Contributions are very welcomed from everyone! Whether you're fixing bugs, adding new features, or improving documentation, your help makes this project better.
+
+To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit (`git commit -am 'Add some feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a new Pull Request.
+
