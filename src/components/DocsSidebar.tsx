@@ -11,7 +11,6 @@ import {
     CursorArrowRippleIcon,
     CalendarIcon,
 } from '@heroicons/react/24/outline'
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import Link from "next/link";
 import Image from "next/image";
 
@@ -30,11 +29,10 @@ const navigation = [
         ]
     },
     { name: 'Endpoints', href: '/docs/endpoints', icon: CursorArrowRippleIcon, current: false },
-    { name: 'Documentation', href: '/docs/documentation', icon: MagnifyingGlassIcon, current: false },
     { name: 'Examples', href: '/docs/examples', icon: BellIcon, current: false
 
     },
-    { name: 'Contribute', href: '#', icon: UsersIcon, current: false },
+    { name: 'Contribute', href: 'https://github.com/mariamills/christmasjoy', icon: UsersIcon, current: false },
 ]
 
 // Utility function to combine class names based on conditions
@@ -119,6 +117,7 @@ export default function DocsSidebar() {
                                                         <li key={item.name}>
                                                             <Link
                                                                 href={item.href}
+                                                                target={item.href.startsWith('http') ? '_blank' : '_self'}
                                                                 className={classNames(
                                                                     item.current
                                                                         ? 'bg-gray-800 text-white'
@@ -136,6 +135,7 @@ export default function DocsSidebar() {
                                             <li className="mt-auto">
                                                 <Link
                                                     href="https://github.com/mariamills/christmasjoy"
+                                                    target="_blank"
                                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                                 >
                                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -171,6 +171,7 @@ export default function DocsSidebar() {
                                         <li key={item.name}>
                                             <Link
                                                 href={item.href}
+                                                target={item.href.startsWith('http') ? '_blank' : '_self'}
                                                 className={classNames(
                                                     item.current
                                                         ? 'bg-red-600 text-white'
@@ -202,6 +203,7 @@ export default function DocsSidebar() {
                             <li className="mt-auto">
                                 <Link
                                     href="https://github.com/mariamills/christmasjoy"
+                                    target="_blank"
                                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-green-600 hover:text-white"
                                 >
                                     <Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
