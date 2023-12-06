@@ -53,28 +53,28 @@ function Accordion({ items }: Readonly<AccordionProps>) {
                         </button>
                     </h2>
                     {openItem === index && (
-                        <div id={`accordion-collapse-body-${index}`} className="p-5 border border-gray-200 ">
+                        <div id={`accordion-collapse-body-${index}`} className="p-5 border border-gray-200 overflow-auto">
                             <p className="mb-4 text-gray-800">{item.answer}</p>
                             {item.title ? <h3 className="mb-2 text-gray-800 font-bold">{item.title}</h3> : null}
                             {item.parameters ? (
                                 <table className="w-full mb-4 text-gray-800">
                                     <thead className="border-b-4">
                                     <tr>
-                                        <th className="text-left">Name</th>
-                                        <th className="text-left">Required</th>
-                                        <th className="text-left">Default</th>
-                                        <th className="text-left">Description</th>
-                                        <th className="text-left">Example</th>
+                                        <th className="text-left px-2">Name</th>
+                                        <th className="text-left px-2">Required</th>
+                                        <th className="text-left px-2">Default</th>
+                                        <th className="text-left px-2">Description</th>
+                                        <th className="text-left px-2">Example</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     {item.parameters.map((parameter) => (
                                         <tr key={parameter.name}>
-                                            <td>{parameter.name}</td>
-                                            <td>{parameter.required ? 'Yes' : 'No'}</td>
-                                            <td>{parameter.default}</td>
-                                            <td>{parameter.description}</td>
-                                            <td>{parameter.example}</td>
+                                            <td className="whitespace-nowrap px-2 py-1">{parameter.name}</td>
+                                            <td className="whitespace-nowrap px-2 py-1">{parameter.required ? 'Yes' : 'No'}</td>
+                                            <td className="whitespace-nowrap px-2 py-1">{parameter.default}</td>
+                                            <td className="whitespace-nowrap px-2 py-1">{parameter.description}</td>
+                                            <td className="whitespace-nowrap px-2 py-1">{parameter.example}</td>
                                         </tr>
                                     ))}
                                     </tbody>
