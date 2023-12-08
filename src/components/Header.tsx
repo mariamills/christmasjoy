@@ -37,7 +37,7 @@ const products = [
 ]
 const callsToAction = [
     { name: 'Support', href: 'https://github.com/mariamills/christmasjoy', icon: UserCircleIcon },
-    { name: 'Leave suggestion', href: '#', icon: SquaresPlusIcon },
+    { name: 'Leave suggestion', href: 'https://github.com/mariamills/christmasjoy/issues', icon: SquaresPlusIcon },
     { name: 'Watch demo [Coming Soon]', href: '#', icon: PlayCircleIcon },
 ]
 
@@ -109,10 +109,10 @@ export default function Header() {
                                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                                 <item.icon className="h-6 w-6 text-gray-600 group-hover:text-red-600" aria-hidden="true" />
                                             </div>
-                                            <Link href={item.href} className="mt-6 block font-semibold text-gray-900">
+                                            <a href={item.href} className="mt-6 block font-semibold text-gray-900">
                                                 {item.name}
                                                 <span className="absolute inset-0" />
-                                            </Link>
+                                            </a>
                                             <p className="mt-1 text-gray-600">{item.description}</p>
                                         </div>
                                     ))}
@@ -124,6 +124,7 @@ export default function Header() {
                                                 <Link
                                                     key={item.name}
                                                     href={item.href}
+                                                    target={item.href === '#' ? '_self' : '_blank'}
                                                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                                                 >
                                                     <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -186,6 +187,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
+                                                        target={item.href === '#' ? '_self' : '_blank'}
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                                     >
                                                         {item.name}
@@ -195,34 +197,34 @@ export default function Header() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <Link
+                                <a
                                     href="/"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Home
-                                </Link>
-                                <Link
-                                    href="/"
+                                </a>
+                                <a
+                                    href="/about"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     About
-                                </Link>
-                                <Link
+                                </a>
+                                <a
                                     href="/#overview"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Overview
-                                </Link>
-                                <Link href="/#jokes" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                </a>
+                                <a href="/#jokes" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                     Jokes
-                                </Link>
+                                </a>
                             </div>
                             <div className="py-6">
-                                <Link
+                                <a
                                     href="/docs/getting-started"
                                     className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
                                     Get Started
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

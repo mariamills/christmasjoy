@@ -13,6 +13,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from 'next/navigation'
 
 // Define the type for classes in classNames function
 type ClassValue = string | undefined | null | false;
@@ -20,7 +21,7 @@ type ClassValue = string | undefined | null | false;
 // Main navigation items
 const navigation = [
     {
-        name: 'Getting Started', href: '/docs/getting-started', icon: HomeIcon, current: true,
+        name: 'Getting Started', href: '/docs/getting-started', icon: HomeIcon, current: false,
         subNavigation: [
             { name: 'Introduction', href: '/docs/getting-started#introduction' },
             { name: 'Quick Start', href: '/docs/getting-started#quick-start' },
@@ -40,21 +41,20 @@ function classNames(...classes: ClassValue[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-// Update current
-function updateCurrent(path: string) {
-    navigation.forEach(item => {
-        item.current = item.href === path;
-    });
-}
-
 export default function DocsSidebar() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [navItems, setNavItems] = useState(navigation);
+    const pathname = usePathname();
 
-    // Update current
+
     useEffect(() => {
-        // run only on client
-        updateCurrent(window.location.pathname);
-    }, []);
+        const updatedNavItems = navigation.map(item => ({
+            ...item,
+            current: item.href === pathname
+        }));
+
+        setNavItems(updatedNavItems);
+    }, [pathname]);
 
     return (
         <div>

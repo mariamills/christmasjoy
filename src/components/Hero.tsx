@@ -10,14 +10,14 @@ export default function Hero() {
                         <div className="mx-auto max-w-2xl">
                             <div className="max-w-lg">
                                 <div className="mt-24 sm:mt-32 lg:mt-16">
-                                    <Link href="/" className="inline-flex space-x-6">
-                    <span className="rounded-full bg-red-600/10 px-3 py-1 text-sm font-semibold leading-6 text-red-600 ring-1 ring-inset ring-red-600/10">
-                      What&apos;s new
-                    </span>
+                                    <Link href="https://github.com/mariamills/christmasjoy/releases/tag/v1.0.0" target="_blank" className="inline-flex space-x-6">
+                                        <span className="rounded-full bg-red-600/10 px-3 py-1 text-sm font-semibold leading-6 text-red-600 ring-1 ring-inset ring-red-600/10">
+                                            What&apos;s new
+                                        </span>
                                         <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
-                      <span>Just released v0.1.0</span>
-                      <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                    </span>
+                                            <span>Just released v1.0.0</span>
+                                            <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                                        </span>
                                     </Link>
                                 </div>
                                 <h1 className="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
