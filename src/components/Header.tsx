@@ -83,7 +83,7 @@ export default function Header() {
                     <Link href="/#overview" className="text-sm font-semibold leading-6 text-gray-900">
                         Overview
                     </Link>
-                    <Link href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900">
+                    <Link href="/#jokes" className="text-sm font-semibold leading-6 text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                         Jokes
                     </Link>
 
@@ -109,7 +109,7 @@ export default function Header() {
                                             <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                                 <item.icon className="h-6 w-6 text-gray-600 group-hover:text-red-600" aria-hidden="true" />
                                             </div>
-                                            <a href={item.href} className="mt-6 block font-semibold text-gray-900">
+                                            <a href={item.href} className="mt-6 block font-semibold text-gray-900" onClick={() => setMobileMenuOpen(false)}>
                                                 {item.name}
                                                 <span className="absolute inset-0" />
                                             </a>
@@ -121,15 +121,15 @@ export default function Header() {
                                     <div className="lg:ml-80 max-w-7xl px-6 lg:px-8">
                                         <div className="grid grid-cols-3 divide-x divide-gray-900/5 border-x border-gray-900/5">
                                             {callsToAction.map((item) => (
-                                                <Link
+                                                <a
                                                     key={item.name}
                                                     href={item.href}
-                                                    target={item.href === '#' ? '_self' : '_blank'}
+                                                    target={item.href === 'http' ? '_self' : '_blank'}
                                                     className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                                                 >
                                                     <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                                                     {item.name}
-                                                </Link>
+                                                </a>
                                             ))}
                                         </div>
                                     </div>
@@ -150,7 +150,7 @@ export default function Header() {
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <Link href="#" className="-m-1.5 p-1.5">
+                        <Link href="#" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
                             <span className="sr-only">ChristmasJoy API</span>
                             <Image
                                 src="/santa-claus.svg"
@@ -170,6 +170,7 @@ export default function Header() {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
+                            {/*Mobile Menu*/}
                             <div className="space-y-2 py-6">
                                 <Disclosure as="div" className="-mx-3">
                                     {({ open }) => (
@@ -187,7 +188,7 @@ export default function Header() {
                                                         key={item.name}
                                                         as="a"
                                                         href={item.href}
-                                                        target={item.href === '#' ? '_self' : '_blank'}
+                                                        target={item.href === 'http' ? '_blank' : '_self'}
                                                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                                     >
                                                         {item.name}
@@ -197,34 +198,42 @@ export default function Header() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <a
+                                <Link
                                     href="/"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Home
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/about"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     About
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/#overview"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Overview
-                                </a>
-                                <a href="/#jokes" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                                </Link>
+                                <Link
+                                    href="/#jokes"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    onClick={() => setMobileMenuOpen(false)}>
                                     Jokes
-                                </a>
+                                </Link>
                             </div>
                             <div className="py-6">
-                                <a
+                                <Link
                                     href="/docs/getting-started"
-                                    className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">
+                                    className="rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
                                     Get Started
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

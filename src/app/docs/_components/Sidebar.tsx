@@ -13,7 +13,7 @@ import {
 } from '@heroicons/react/24/outline'
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from 'next/navigation'
+import {usePathname} from 'next/navigation'
 
 // Define the type for classes in classNames function
 type ClassValue = string | undefined | null | false;
@@ -41,20 +41,18 @@ function classNames(...classes: ClassValue[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function DocsSidebar() {
+export default function Sidebar() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
-    const [navItems, setNavItems] = useState(navigation);
     const pathname = usePathname();
 
+    // Function to update item.current
+    // Simplified updateCurrent logic
+    const updateCurrent = (href: string) => href === pathname;
 
     useEffect(() => {
-        const updatedNavItems = navigation.map(item => ({
-            ...item,
-            current: item.href === pathname
-        }));
 
-        setNavItems(updatedNavItems);
     }, [pathname]);
+
 
     return (
         <div>
@@ -119,9 +117,9 @@ export default function DocsSidebar() {
                                                                 href={item.href}
                                                                 target={item.href.startsWith('http') ? '_blank' : '_self'}
                                                                 className={classNames(
-                                                                    item.current
-                                                                        ? 'bg-gray-800 text-white'
-                                                                        : 'text-gray-400 hover:text-white hover:bg-gray-800',
+                                                                    updateCurrent(item.href)
+                                                                        ? 'bg-red-600 text-white'
+                                                                        : 'text-gray-600 hover:text-white hover:bg-red-600',
                                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                                 )}
                                                             >
@@ -173,7 +171,7 @@ export default function DocsSidebar() {
                                                 href={item.href}
                                                 target={item.href.startsWith('http') ? '_blank' : '_self'}
                                                 className={classNames(
-                                                    item.current
+                                                    updateCurrent(item.href)
                                                         ? 'bg-red-600 text-white'
                                                         : 'text-gray-600 hover:text-white hover:bg-red-600',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
