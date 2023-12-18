@@ -1,4 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
+import { revalidatePath } from 'next/cache'
 
 enum DayOfWeek {
     Sunday = 0,
@@ -52,8 +53,13 @@ function getTimeUntilChristmas(): TimeUntilChristmas {
     };
 }
 
-export function GET(request: NextRequest) {
+export const revalidate = true;
+
+export async function GET(request: NextRequest) {
     const response = NextResponse.json(getTimeUntilChristmas());
     response.headers.set('Cache-Control', 'no-store');
+
+    const path = request.nextUrl.pathname;
+    revalidatePath(path)
     return response;
 }
