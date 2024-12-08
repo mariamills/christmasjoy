@@ -3,6 +3,7 @@ import Link from "next/link";
 
 interface Image {
     url: string;
+    caption: string;
 }
 function ChristmasImage() {
     const [images, setImages] = useState<Image[]>([]);
@@ -43,7 +44,7 @@ function ChristmasImage() {
                                 <div>
                                     <img
                                         src={images[0].url}
-                                        alt=""
+                                        alt={images[0].caption}
                                         className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                                     />
                                 </div>
@@ -52,21 +53,21 @@ function ChristmasImage() {
                                 <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                                     <img
                                         src={images[1].url}
-                                        alt=""
+                                        alt={images[1].caption}
                                         className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                                     />
                                 </div>
                                 <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                                     <img
                                         src={images[2].url}
-                                        alt=""
+                                        alt={images[2].caption}
                                         className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                                     />
                                 </div>
                                 <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                                     <img
                                         src={images[3].url}
-                                        alt=""
+                                        alt={images[3].caption}
                                         className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                                     />
                                 </div>
